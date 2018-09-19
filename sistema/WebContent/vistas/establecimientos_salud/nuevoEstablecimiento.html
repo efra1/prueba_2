@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Nuevo Municipio</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+
+   
+</head>
+
+<body>
+
+
+
+<div class="container">
+	<div class="row" id="fondo">
+		<div class="col-md-4 col-md-offtset-3">
+			<form action="guardar">
+				<h3><p class="text text-center text-primary" >Nuevo Establecimiento </p></h3>
+				<div class="form-group has success">
+					<div class="col-md-6">
+						<label>Tipo: </label>
+						<input type="text" name="tipo" class="form-control">
+						</div>
+					<div class="col-md-6">
+						<label>Nombre: </label>
+						<input type="text" name="nombre" class="form-control">
+					</div>
+					<br><br><br>
+					 <a class="btn btn-warning" href="lista">Regresar</a>
+                           <button  type="submit" class="btn btn-primary" >Guardar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+        
+
+
+</body>
+
+</html>

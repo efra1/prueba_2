@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>Nueva Embarazada</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <!-- <script type="text/javascript" src="../../js/estilo.js"></script>  -->
+<link rel="stylesheet" type="text/css" href="..././css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+	<script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+
+
+
+   
+</head>
+
+<body>
+
+  <div class="container" >
+    <div class="col-md-5"  id="fondo">
+      <h3 class="text text-center text-info">Nueva Embarazada</h3>
+ <div class="row">
+ <form role="form" action="guardar">
+  <div class="col-md-6">
+    <label >Celular:</label>
+    <input type="text" class="form-control" name="telf">
+  </div>
+   <div class="col-md-6">
+    <label >Nombre(s):</label>
+    <input type="text" class="form-control" name="nombres">
+  </div>
+  <div class="col-md-6">
+    <label >Apelido(s):</label>
+    <input type="text" class="form-control" name="apellidos">
+  </div>
+   <div class="col-md-6">
+    <label >Fecha de Nacimiento:</label>
+    <input type="text" class="form-control" name="f_nacimiento1">
+  </div>
+  <div class="col-md-6">
+    <label >CI:</label>
+    <input type="text" class="form-control" name="ci">
+  </div>
+  <div class="col-md-6">
+    <label >Pertenencia Etnica:</label>
+     <select class="form-control" id="sel1" name="etnia">
+    #foreach($r in $listae)
+    <option value="$r.id_etn">$r.nombre</option>
+    #end
+  </select>
+  </div>
+   <div class="col-md-6">
+    <label >Comunidad:</label>
+     <select class="form-control" id="sel1" name="comunidad">
+    #foreach($r in $listac)
+    <option value="$r.id_com">$r.nombre</option>
+    #end
+  </select>
+  </div>
+  <div class="col-md-6">
+    <label >Centro de salud:</label>
+     <select class="form-control" id="sel1" name="centro_salud">
+    #foreach($r in $listaest)
+    <option value="$r.id_cen">$r.nombre</option>
+    #end
+  </select>
+  </div>
+  
+   <div class="col-md-12">
+    <label >Fecha de Parto probable:</label>
+    <input type="text" class="form-control" name="parto_probable1">
+  </div>
+  
+</div>
+<br>
+     <a class="btn btn-warning" onclick="swal({   title: 'Seguro que quiere Salir?',   text: 'Sus datos no han sido guardados',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Si, Salir!',   closeOnConfirm: false }, function(){ window.location.href='listaM' });">Regresar</a>
+    <button type="submit" class="btn btn-success">Guardar</button>
+      <br><br><br></div>
+ <div class="col-md-6" id="fondo">
+      <h3 class="text text-center text-info">Contacto</h3>
+ <div class="row">
+ 	<div class="col-md-6">
+    <label >Celular:</label>
+    <input type="text" class="form-control" name="telefonoc">
+  </div>
+   <div class="col-md-6">
+    <label >Nombre(s):</label>
+    <input type="text" class="form-control" name="nombrec">
+  </div>
+  <div class="col-md-6">
+    <label >Apelido(s):</label>
+    <input type="text" class="form-control" name="apellidoc">
+  </div>
+    <div class="col-md-6">
+  <label for="ex1">SEXO:</label>
+   <select class="form-control" id="sel1" name="sexoContacto">
+    <option value="M" selected>MASCULINO</option>
+    <option value="F">FEMENINO</option>
+  </select>
+	</div>
+ <div class="col-md-12">
+    <label >Relacion:</label>
+    <input type="text" class="form-control" name="relacionCon">
+  </div>
+
+</div>
+<br><br>
+</div>
+  </form>
+</div>
+    
+    
+
+
+	        
+</body>
+</html>

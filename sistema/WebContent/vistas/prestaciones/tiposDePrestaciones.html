@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Tipos de Prestaciones</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+ 
+
+
+   
+</head>
+
+<body>
+
+
+	        
+	         <br>
+	
+  <div id="boton">
+    <a href="../prestacion/nuevo"><button type="button" class="btn btn-success btn-lg" target="pantalla">Nueva Prestacion</button></a>
+
+  </div>
+<div id="tablas">
+
+
+  
+  <h1 class="titulo text-primary text-center">Tipos de Prestaciones</h1>
+  
+  <table class="table table-striped table-bordered datatables" id="tablag">
+	    <thead>
+	        <tr class="text-center">
+	            <th class="text-center col-md-4">Prestacion</th>
+	            <th class="text-center col-md-4">Establecimientos de Salud</th>
+	            <th class="text-center col-md-4">Estado</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $lista)
+	    	<tr>
+	            <td><a href="editar?id=$l.id_pre">$l.nombre</a></td>
+	            <td>$l.centros</td>
+	            <td>#if($l.activo)HABILITADO #else INHABILITADO#end</td>
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+	
+  
+</div>
+
+
+  		
+ 
+</body>
+
+</html>

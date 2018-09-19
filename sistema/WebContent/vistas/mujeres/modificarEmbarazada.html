@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Modificar Embarazada</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+<link rel="stylesheet" type="text/css" href="..././css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+	<script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+
+
+
+   
+</head>
+
+<body>
+<div class="container">
+	<div class="col-md-5" id="fondo">
+	<h3 class="text text-center text-info">Modificar Embarazada</h3>
+		<form action="actualizar">
+		<input type="hidden" name="embarazada" value="$per.id_per">
+			 <div class="col-md-6">
+    <label >Celular:</label>
+    <input type="text" class="form-control" name="telf" value="$per.telf">
+  </div>
+   <div class="col-md-6">
+    <label >Nombre(s):</label>
+    <input type="text" class="form-control" name="nombres" value="$per.nombres">
+  </div>
+  <div class="col-md-6">
+    <label >Apelido(s):</label>
+    <input type="text" class="form-control" name="apellidos" value="$per.apellidos">
+  </div>
+   <div class="col-md-6">
+    <label >Fecha de Nacimiento:</label>
+    <input type="text" class="form-control" name="f_nacimiento1" value="$!{per.f_nac}">
+  </div>
+  <div class="col-md-6">
+    <label >CI:</label>
+    <input type="text" class="form-control" name="ci" value="$!{per.ci}">
+  </div>
+  <div class="col-md-6">
+    <label >Pertenencia Etnica:</label>
+     <select class="form-control" id="sel1" name="etnia">
+    #foreach($r in $listae)
+    <option value="$r.id_etn" #if($r.id_etn==$per.etnia)selected#end>$r.nombre</option>
+    #end
+  </select>
+  </div>
+   <div class="col-md-6">
+    <label >Comunidad:</label>
+     <select class="form-control" id="sel1" name="comunidad">
+    #foreach($r in $listac)
+    <option value="$r.id_com"  #if($r.id_com==$per.comunidad)selected#end>$r.nombre</option>
+    #end
+  </select>
+  </div>
+  <div class="col-md-6">
+    <label >Centro de salud:</label>
+     <select class="form-control" id="sel1" name="centro_salud">
+    #foreach($r in $listaest)
+    <option value="$r.id_cen" #if($r.id_cen==$per.centro_salud)selected#end>$r.nombre</option>
+    #end
+  </select>
+  <br><br>
+  </div>
+  
+     <a class="btn btn-warning" onclick="swal({   title: 'Seguro que quiere Salir?',   text: 'Sus datos no han sido guardados',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Si, Salir!',   closeOnConfirm: false }, function(){ window.location.href='listaM' });">Regresar</a>
+    <button type="submit" class="btn btn-success">Guardar</button>
+      <br><br>
+</div>
+
+
+		</form>
+	</div>
+</div>
+</body>
+</html>

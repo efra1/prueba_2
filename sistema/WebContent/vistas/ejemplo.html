@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo</title>
+	<link rel="stylesheet" type="text/css" href="../css/sweetalert.css"/>
+	<script type="text/javascript" src="../js/sweetalert.min.js"></script>
+
+</head>
+<body>
+<input type="button" value="alerta" onclick="swal({   title: 'Guardar Usuario?',   text: '¿Esta seguro que quiere guardar este usuario?',   type: 'info',   showCancelButton: true,   closeOnConfirm: false,   showLoaderOnConfirm: true, }, function(){   setTimeout(function(){     swal('El Usuario ha sido guardado exitosamente',window.location.href='lista');   }, 2000  );  });  ">
+ <input type="radio">Si</input>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Mujeres</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+   
+</head>
+
+<body>
+
+	        
+	         <br>
+	
+  
+    <a href="nueva" target="pantalla"><button type="button" class="btn btn-success btn-lg"> Nueva Embarazada</button></a>
+
+<div id="tablas">
+
+  <h1 class="titulo text-info text-center">Mujeres</h1>
+  
+  <table class="table table-center table-striped table-bordered datatables" >
+	    <thead >
+	        <tr>
+	            <th class="text-center" id="fondot">Mujer</th>
+	            <th class="text-center" id="fondot">Celular</th>
+	            <th class="text-center" id="fondot">Contacto</th>
+	            <th class="text-center" id="fondot">Comunidad</th>
+	            <th class="text-center" id="fondot">Estado</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $lista)
+	    	<tr >
+	            <td><a href="../embarazos/listaEmb?id_per=$l.id_per">$l.nombres $l.apellidos</a></td>
+	            <td>$!{l.telf}</td>
+	            <td>$!{l.nombresc} $!{l.apellidosc}</td>
+	            <td>$!{l.nombre}</td>
+	            <td>#if($!{l.activo}) Habilitada #else Inhabilitada#end
+	           
+	            </td>
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+	
+  
+</div>
+
+  		
+ 
+</body>
+
+</html>

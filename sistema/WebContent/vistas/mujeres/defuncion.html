@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>Defuncion</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+<link rel="stylesheet" type="text/css" href="..././css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  
+
+
+
+   
+</head>
+
+<body>
+
+
+	        
+	         <br>
+	        <div class="container"   >
+    <div class="col-md-6"  id="fondo">
+      <h3 class="text text-center text-info">REGISTRO DE DEFUNCION</h3>
+ <div class="row">
+ <form role="form" action="actualizarDef">
+ <input type="hidden" name="embarazada" value="$embarazada.id_per">
+  <div class="col-md-6">
+    <label >Fecha de Defuncion:</label>
+    <input type="text"  class="form-control" placeholder="" name="fechaDef">
+  </div>
+  <div class="col-md-6">
+    <label >Fecha de Notificacion:</label>
+    <input type="text"  class="form-control" placeholder="" name="fechaNot">
+  </div>
+  <br>
+ <div class="col-md-12">
+    <label >Observacion de Notificacion:</label>
+    <textarea class="form-control"></textarea>
+  </div>
+  
+  <div class="col-md-6">
+    <label >Desea Confirmar:</label>
+    <input type="radio"  checked="checked">Si</input>
+     <input type="radio" >No</input>
+  </div> 
+  <div class="col-md-6">
+    <label >Fecha de Confirmacion:</label>
+    <input type="text"  class="form-control" placeholder="" name="fechaConf">
+  </div>
+  <div class="col-md-12">
+    <label >Observacion de Confirmacion:</label>
+    <textarea class="form-control"></textarea>
+  </div>
+  
+</div>
+<br><br><br>
+    <a class="btn btn-warning" onclick="swal({   title: 'Esta Seguro de Salir?',   text: 'La informacion no ha sido registrada',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Salir!',   closeOnConfirm: false }, function(){ window.location.href='../mujeres/listaM' });">Regresar</a>
+    <button type="submit" class="btn btn-primary"  >Guardar</button>
+    <br><br><br>
+      </div>
+  
+</form>
+</div>
+
+</div>
+  
+</div>
+
+</body>
+</html>

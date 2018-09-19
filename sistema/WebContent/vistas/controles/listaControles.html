@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>controles</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+   
+</head>
+
+<body>
+
+<div class="well">	
+    		Embarazada: $!{embarazada.nombres} $!{embarazada.apellidos}
+    	<br>Estado: #if($embarazo.tipo=='g')GESTANDO#end
+    					#if($embarazo.tipo=='r')RIESGO#end
+    					#if($embarazo.tipo=='c')CULMINADO#end
+    					#if($embarazo.tipo=='i')INTERRUMPIDO#end
+    	<br>Parto Probable: $!{listaEmb.parto_prob}
+    	<br><br>
+</div>
+	<a class="btn btn-warning btn-lg" href="../embarazos/listaEmb?id_per=$embarazada.id_per"> Regresar</a>
+	<a class="btn btn-info btn-lg" href="../controles/recienNacido?embarazada=$embarazada.id_per&embarazo=$embarazo.id_emb" >Registrar Parto</a>
+	<a class="btn btn-default btn-lg" href="" >Registrar Riesgo</a>
+	<a class="btn btn-danger btn-lg" href="../controles/interrupcion?embarazada=$per.id_per" >Interrupcion</a>
+	
+	<h1 class="text text-center text-info">Controles</h1>
+	
+	<table class="table table-striped table-bordered datatables" id="tablag">
+	    <thead>
+	        <tr id="fondot">
+	            <th>Tipo</th>
+	            <th>Control</th>
+	            <th>Fecha</th>
+	            <th>Asistido</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $lista)
+	    	<tr>
+	            <td>#if($l.tipo=='p')Pre-Natal#end
+    					#if($per.tipo=='n')Natal#end</td>
+	            <td>$!{l.numero}</td>
+	            <td>$l.fecha</td>
+	            <td><a href="estadoControl?id_con=$l.id_con&embarazada=$embarazada.id_per">#if($l.asistido)Asistido#else Pendiente#end</a></td>
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+	
+</body>        
+	
+</body>
+
+</html>

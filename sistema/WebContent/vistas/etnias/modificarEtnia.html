@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Modificar Etnia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+
+
+
+   
+</head>
+
+<body>
+   
+	         <br>
+	
+  <div class="container" id="formulario">
+  <div class="row">
+		<div class="col-md-4 col-md-offset-3" id="fondo">
+  <h3>Modificar Pertenencia Etnica</h3>
+   <form role="form" action="modificar">
+   <input type="hidden" name="id_etn" value="$etnia.id_etn">
+    <div class="form-group" >
+    <label >NOMBRE:</label>
+    <input type="text" class="form-control has-success" value="$etnia.nombre" name="nombre">
+    </div>
+   
+    <a class="btn btn-warning" href="lista_etnia">Regresar</a>
+    <a class="btn btn-danger" href="inhabilitar?id_etn=$etnia.id_etn">Inhabilitar</a>
+     <button type="submit" class="btn btn-success">Actualizar</button>
+  </form>
+  		</div>
+  
+</div>
+    </div>
+  		
+ 
+</body>
+
+</html>

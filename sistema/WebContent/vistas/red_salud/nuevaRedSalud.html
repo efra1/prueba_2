@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Nueva Red de Salud</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+	<script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+	
+ 
+   
+</head>
+
+<body>
+	        
+	         <br>
+	
+  
+<div class="container" >
+		<div class="col-md-4 col-md-offset-3" id="fondo">
+  <h3>Nueva Red de Salud</h3>
+   <form role="form" action="guardar">
+    <div class="form-group has-success"  >
+    <label >Nombre:</label>
+    
+    <input type="text" name="nombre" class="form-control">
+    </div>
+    
+   
+    <a class="btn btn-warning" onclick="swal({   title: 'Esta Seguro que quiere Salir?',   text: 'Su informacion no ha sido registrada',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Salir!',   closeOnConfirm: false }, function(){ window.location.href='lista' });">Regresar</a>
+     <button type="submit" class="btn btn-success">Guardar</button>
+  </form>
+  		</div>
+  
+</div>
+ 
+</body>
+
+</html>

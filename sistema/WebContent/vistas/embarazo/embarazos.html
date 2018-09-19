@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>emb</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+   
+</head>
+
+<body>
+
+	        
+	        
+	<div >
+	
+	<div class="col-md-6 well">
+	EMBARAZADA: $per.nombres $per.apellidos  <br>
+		  EDAD: $edad años<br>
+	   CELULAR: $per.telf <br>
+	 MUNICIPIO: $per.municipio <br>
+	 COMUNIDAD: $per.comunidad <br>
+	 	ESTADO:  #if($per.tipo=='g')Gestando#end
+			#if($per.tipo=='r')Riesgo#end
+			#if($per.tipo=='i')Interrumpido#end
+			#if($per.tipo=='d')Defuncion#end
+</div>
+	<div class="col-md-6 well">
+	Contacto:$per.contacto<br>
+	Celular:  <br>
+	Sexo: <br>
+	</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br>
+  
+    <a href="../mujeres/listaM" target="pantalla"><button type="button" class="btn btn-warning btn-lg"> Regresar</button></a>
+    <a href="../mujeres/modificar?id_per=$per.id_per" target="pantalla"><button type="button" class="btn btn-success btn-lg"> Editar Datos</button></a>
+    <a href="../embarazos/nuevoEmbarazo?id_per=$per.id_per" target="pantalla"><button type="button" class="btn btn-info btn-lg"> Nuevo Embarazo</button></a>
+    <a href="../mujeres/defuncion?id_per=$per.id_per" target="pantalla"><button type="button" class="btn btn-danger btn-lg"> Defuncion</button></a>
+
+<div id="tablas">
+
+ <h1 class="titulo text-info text-center">Embarazos</h1>
+  
+  <table class="table table-center table-striped table-bordered datatables" id="tablag">
+	    <thead>
+	        <tr>
+	            <th class="text-center" id="fondot">Parto Probable</th>
+	            <th class="text-center" id="fondot">Fecha de Parto</th>
+	            <th class="text-center" id="fondot">Estado</th>
+	            	            
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $listaEmb)
+	    	<tr >
+	            <td><a href="../controles/lista?embarazo=$l.id_emb&embarazada=$per.id_per">$!{l.parto_prob}</a></td>
+	            <td>$!{l.parto_inst}</td>
+	            <td>#if($l.tipo=='g')Gestando#end
+					#if($l.tipo=='r')Embarazo de Riesgo#end
+					#if($l.tipo=='i')Embarazo Interrumpido#end
+					#if($l.tipo=='d')Defuncion con interrupcion de Embarazo#end
+				</td>
+	            
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+	
+  
+</div>
+
+  		
+ 
+</body>
+
+</html>

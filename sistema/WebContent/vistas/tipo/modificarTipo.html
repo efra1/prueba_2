@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Modificar Tipo</title>
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+
+
+
+   
+</head>
+
+<body>
+
+          
+           <br>
+  
+  <div class="container" id="formulario" >
+        <div class="row " >
+            <div class="col-md-4 col-md-offset-3" id="fondo"> 
+               <form action="modificar" >
+                      <p class="text-center text-primary"><h3>Modificar Tipo</h3></p>
+                      <br>
+                 <input type="hidden" name="id_tip" value="$tipo.id_tip">
+                <div class="form-group  has-success">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" name="nombre" value="$tipo.nombre">
+              <label for="nombre"><h4>Descripcion</h4></label>
+              <textarea class="form-control" rows="3" name="descrip">$tipo.descrip</textarea>
+              </div>
+             
+              <a href="lista"><button type="button" class="btn btn-warning">Regresar</button></a>
+              <a class="btn btn-danger" href="inhabilitar?id=$tipo.id_tip">Inhabilitar</a>
+    		<button type="submit" class="btn btn-success">Actualizar</button>
+                
+              </div>
+              
+               </form>
+        </div>
+    </div>
+      
+ 
+</body>
+
+</html>

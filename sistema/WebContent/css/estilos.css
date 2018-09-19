@@ -1,0 +1,109 @@
+#pantalla{
+	width: 100%;
+	height: 550px;
+	border: none;
+	
+}
+
+#menuArriba{
+  background-color: black;
+}
+
+.menu{
+       float:left;
+     margin-top: 0px;
+}
+.menu li{
+    display:inline-block;
+}
+ .menu li:first-child{
+    margin-left:0;
+}
+.menu li a{
+    display: block;
+    font-size:1em;
+    color:white;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+#nav .current a {
+   color:#fff;
+   background:#6dc5dd;
+   -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.menu li a:hover ,.menu li.active a{
+   color:#fff;
+   background:orange !important;
+} 
+.dropdown-menu{
+   background:black !important;
+   color:white;
+}
+.toggleMenu {
+    display:  none;
+    padding:4px 5px 0px 5px;
+    border-radius:2em; 
+    -webkit-border-radius:2em;
+    -moz-border-radius:2em;
+    -o-border-radius:2em; 
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+
+}
+
+body{
+        background-color: #c0c0c0; 
+
+    }
+
+    
+
+.badge-big{
+    
+    font-size:5em;
+    border-radius:80%;
+    
+}
+
+p.texto{
+    font-size: 1.4em;
+    color: white;
+     
+    text-align: center;
+    padding-top: 0px;
+    opacity: .6;
+
+}
+#menuder{
+    background-color: white;
+    text-align: right;
+   
+}
+
+#textoNav{
+color: #00ffff;
+}
+#fondo{
+background-color: white;
+}
+#fondot{
+background-color: #00BFFF;
+}
+#fondotabla{
+background-color: blue;
+}

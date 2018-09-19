@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>Mujeres</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+   
+</head>
+
+<body>
+<h2 class="text-center">Historial</h2>
+	        
+	         <br>
+	<div>
+		<table class="table table-center  table-bordered" >
+	    <thead >
+	        <tr>
+	        	 <td> Fecha de Nacimiento</td>
+	        	 <td>$f_nac</td>
+	        </tr>
+	       
+	        <tr> 
+	        	<td>Edad</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Nro de Embarazos</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Nro. de hijos</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Celular</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Estado</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Municipio</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Comunidad</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Establecimiento de Salud</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Contacto</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Relacion o Parentesco</td>
+	        	<td></td>
+	        </tr>
+	        <tr> 
+	        	<td>Celular del contacto</td>
+	        	<td></td>
+	        </tr>
+	        </thead>
+	        </table>
+
+	</div>
+  
+   
+<div id="tablas">
+
+  <h3 class="titulo ">Embarazos</h3>
+  
+  <table class="table table-center  table-bordered " >
+	    <thead >
+	        <tr>
+	            <th class="text-center text-info" id="fondotabla">#</th>
+	            <th class="text-center text-info" id="fondotabla">Parto Probable</th>
+	            <th class="text-center text-info" id="fondotabla">Fecha de Parto</th>
+	            <th class="text-center text-info" id="fondotabla">Numero de Hijos</th>
+	            <th class="text-center text-info" id="fondotabla">Riesgo</th>
+	            <th class="text-center text-info" id="fondotabla">Fecha de Interupcion</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $listaembarazos)
+	    	<tr >
+	            <td>$l.numero</td>
+	            <td>$!{l.parto_prob}</td>
+	            <td>$!{l.parto_inst}</td>
+	            <td>$!{l.embarazo}</td>
+	            <td>$!{l.riesgo}</td>
+	            <td>$!{l.interrupcion}</td>
+	        </tr> 	
+	    	#end
+	    </tbody>
+	</table>
+
+	 <h3 class="titulo">Hijos/Hijas</h3>
+  
+  <table class="table table-center table-bordered" >
+	    <thead >
+	        <tr>
+	            <th class="text-center text-info" id="fondotabla">#</th>
+	            <th class="text-center text-info" id="fondotabla">Nombres y Apellidos</th>
+	            <th class="text-center text-info" id="fondotabla">Fecha de Nacimiento</th>
+	            <th class="text-center text-info" id="fondotabla">Sexo</th>
+	            <th class="text-center text-info" id="fondotabla">Peso</th>
+	            
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $listaHijo)
+	    	<tr >
+	            <td>$l.numero</td>
+	            <td>$!{l.nombres}</td>
+	            <td>$!{l.f_nac}</td>
+	            <td>$!{l.sexo}</td>
+	            <td>$!{l.peso}</td>
+	            
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+	
+  
+</div>
+
+  		
+ 
+</body>
+
+</html>

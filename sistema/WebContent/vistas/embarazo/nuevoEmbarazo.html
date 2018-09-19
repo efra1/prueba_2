@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>embarazo</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+	<script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+
+  
+
+
+
+   
+</head>
+
+<body>
+   
+	         <br>
+	
+  <div class="container" id="formulario">
+  <div class="row">
+		<div class="col-md-4 col-md-offset-3" id="fondo">
+  <h3 class="text text-center text-info">Nuevo Embarazo</h3>
+   <form role="form" action="guardar">
+   <input type="hidden" name="embarazada" value="$embarazada">
+    <div class="form-group" >
+    <label >Fecha de Parto Probable:</label>
+    <input type="text" class="form-control has-success" name="parto_prob2">
+    <a>Dia/Mes/Año</a>
+    </div>
+   
+    <a class="btn btn-warning" onclick="swal({   title: 'Seguro que quiere Salir?',   text: 'Sus datos no han sido guardados',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Si, Salir!',   closeOnConfirm: false }, function(){ window.location.href='listaEmb?id_per=$embarazada' });">Regresar</a>
+    <button type="submit" class="btn btn-success">Guardar</button>
+  </form>
+  		</div>
+  
+</div>
+    </div>
+  		
+ 
+</body>
+
+</html>

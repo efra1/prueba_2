@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>Adicionar Usuario</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/sweetalert.css"/>
+  <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../../js/estilo.js"></script>
+<link rel="stylesheet" type="text/css" href="..././css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  
+
+
+
+   
+</head>
+
+<body>
+
+
+	        
+	         <br>
+<div class="container"   >
+    <div class="col-md-4"  id="fondo">
+      <h3>DATOS DE LA PERSONA</h3>
+ <div class="row">
+ <form role="form" action="guardar">
+  <div class="col-md-6">
+    <label >Celular:</label>
+    <input type="text"  class="form-control" placeholder="78227912" name="telf">
+  </div>
+  <div class="col-md-6">
+    <label >Ci:</label>
+    <input type="text" class="form-control" placeholder="7236727" name="ci">
+  </div>
+   <div class="col-md-6">
+    <label >Nombre(s):</label>
+    <input type="text" class="form-control" placeholder="Efrain Benjamin" name="nombres">
+  </div>
+  <div class="col-md-6">
+    <label >Apellidos(s):</label>
+    <input type="text" class="form-control" placeholder="Soruco Guerrero" name="apellidos">
+  </div>
+   <div class="col-xs-12">
+  <label for="ex1">SEXO:</label>
+   <select class="form-control" id="sel1" name="sexo">
+    <option value="M" selected>MASCULINO</option>
+    <option value="F">FEMENINO</option>
+  </select>
+</div>
+</div>
+<br>
+    <a class="btn btn-warning" onclick="swal({   title: 'Esta Seguro de Salir?',   text: 'La informacion no ha sido registrada',   type: 'warning',   showCancelButton: true, cancelButtonText: 'Cancelar',   confirmButtonColor: '#DD6B55',   confirmButtonText: 'Salir!',   closeOnConfirm: false }, function(){ window.location.href='lista' });">Regresar</a>
+    <button type="submit" class="btn btn-primary"  >Guardar</button>
+    <br><br>
+      </div>
+      
+ <div class="col-md-4" id="fondo"   >
+      <h3>DATOS DEL USUARIO</h3>
+ <div class="row">
+  <div class="col-md-6">
+    <label >Usuario:</label>
+    <input type="text" class="form-control" placeholder="Admin" name="login">
+  </div>
+  <div class="col-md-6">
+    <label >Constraseña:</label>
+    <!--PASSWORD--><input name="password" type="password" class="form-control" value="clave" onfocus="this.value=''" /><!--END PASSWORD-->
+  </div>
+   <div class="col-xs-6">
+  <label for="ex1">Rol:</label>
+   <select class="form-control" id="sel1" name="rol">
+    #foreach($r in $roles)
+    <option value="$r.id_rol">$r.nombre</option>
+    #end
+  </select>
+</div>
+<div class="col-xs-6">
+  <label for="ex1">Alcance:</label>
+   <select class="form-control" id="sel1" name="alcance">
+    <option value="g" selected>Global</option>
+    <option value="r">Red de Salud</option>
+    <option value="m">Municipio</option>
+    <option value="c">Comunidad</option>
+    <option value="e">Centro de Salud</option>
+  </select>
+  <br>
+</div>
+</form>
+</div>
+
+</div>
+  
+</div>
+</body>
+</html>

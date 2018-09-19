@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Establecimientos</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+ <link rel="stylesheet" type="text/css" href="../../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="../../styles/custom.css">
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../../scripts/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="../../scripts/tableConfig.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datatables").dataTable(dataTableParams);
+		});
+	</script>
+ 
+
+   
+</head>
+
+<body>
+	        
+	         <br>
+           <div class="well">
+            Establecimiento: $comunidad.nombre<br>
+             Estado: #if($comunidad.activo)HABILITADO #else INHABILITADO#end
+           </div>
+	<br>
+  <div id="boton">
+   <a href="../red_salud/lista"><button type="button" class="btn btn-warning btn-lg">Regresar</button></a>
+   <a href="../comunidad/editar?id_com=$comunidad.id_com"> <button type="button" class="btn btn-info btn-lg">Editar Comunidad</button></a>
+   <a class="btn btn-danger btn-lg" href="../comunidad/inhabilitar?id_com=$comunidad.id_com">Inhabilitar</a>
+   <a href="nuevo?id_com=$comunidad.id_com"><button type="button" class="btn btn-success btn-lg">Nuevo Establecimiento</button></a>
+
+  </div>
+<div id="tablas">
+<h1 class="titulo text-primary text-center">Establecimientos de la Comunidad $comunidad.nombre</h1>
+  
+  <table class="table table-center table-striped table-bordered datatables" id="tablag">
+	    <thead>
+	        <tr>
+	            <th class="text-center col-md-3">Establecimientos</th>
+	            <th class="text-center col-md-3">Encargado</th>
+	            <th class="text-center col-md-3">tipo</th>
+	            <th class="text-center">Estado</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	#foreach($l in $lista)
+	    	<tr>
+	            <td><a href="../comunidad/lista?municipio=$l.id_mun">$l.nombre</a></td>
+	            <td>$l.encargado</td>
+	            <td>$l.tipo</td>
+	            <td>#if($l.activo)HABILITADO #else INHABILITADO#end</td>
+	        </tr>
+	    	#end
+	    </tbody>
+	</table>
+</div>
+
+  		
+ 
+</body>
+
+</html>

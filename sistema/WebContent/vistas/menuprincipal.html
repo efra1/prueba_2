@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>PROYECTO</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+	<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/estilos.css"/>
+  <script type="text/javascript" src="../js/estilo.js"></script>
+   <link rel="stylesheet" type="text/css" href="../css/font-awesome.ccs">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+
+
+
+   
+</head>
+
+<body>
+<nav class="navbar navbar-default" id="menuArriba">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only" id="textoNav">Menu Principal</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+    <div class="menu" >
+      <ul class="nav navbar-nav">
+     <li> <img  class="" src="../../img/emb.png"></li>
+        <li><a href="#" id="textoNav" >Enlaces<span class="sr-only"></span></a></li>
+        <li><a href="../mujeres/listaM" target="pantalla" id="textoNav"><span class="fa fa-female fa-lg"></span> Mujeres</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="textoNav"><span class="fa fa-lg fa-signal"></span> Reportes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Reporte General</a></li>
+            
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="textoNav"><span class="fa fa-envelope"></span> Mensajes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">No hay Acciones</a></li>
+            
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="textoNav"><span class="fa fa-cog fa-spin"></span> Administracion<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../tipo/lista" target="pantalla" class="fa fa-child"> Tipos de Personas</a></li>
+            <li><a href="../prestacion/lista_prestacion" target="pantalla" class="fa fa-ambulance"> Tipos de Prestaciones</a></li>
+            <li><a href="../pertenenciaEtnica/lista_etnia" target="pantalla" class="fa fa-flag"> Pertenencia Etnica</a></li>
+            <li><a href="../red_salud/lista" target="pantalla" class="fa fa-sitemap"> Redes de Salud</a></li>
+            <li><a href="../usuario/lista" target="pantalla" class="fa fa-user"> Usuarios</a></li>
+           </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="textoNav"><span class="fa fa-question-circle "></span> Ayuda<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Como Usar el Sistema</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+     </ul>
+    </li>
+   </ul>
+   </div>
+        <ul class="navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="textoNav">$usuario.nombres $usuario.apellidos<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li class="active"> <a href="logout" id="textoNav" class="text text-info">Salir</a></li>
+          </ul>
+        </li>
+        </ul>
+  </div>
+ </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+	        
+	         <br>
+	
+
+<div id="panel" class="col-md-9" >
+
+  <iframe id="pantalla" name="pantalla" src="botones">
+  </iframe>
+
+</div>		
+ 		
+
+
+
+      
+  		<div class="col-md-3 hidden-xs hidden-sm" >
+      
+       <div class="col-sg-3 col-xs-0" id="menuder">
+        <ul class="nav nav-pilss nav-stacked" >
+  			<li role="presentation" class="active"><a href="botones" target="pantalla" ><span class="fa fa-home fa-2x"> Inicio</span></a></li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href=""><span class="fa fa-building  fa-lg"> Establecimientos </span></a></li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href="../mujeres/listaM" target="pantalla"><span class="fa fa-female fa-lg"> Mujeres</span></a>    </li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href="tiposDePersona.html"> <span class="fa fa-users fa-lg"> Personas</span> </a></li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href=""> <span class="fa fa-globe fa-lg"> Reporte Global</span></a></li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href=""><span class="fa fa-bullhorn fa-lg"> Notificaciones de Radio</span></a></li><li class="divider"></li>
+  				<li role="presentation" class="active"><a href=""><span class="fa fa-file-text fa-lg"> Catalogo de Mensajes</span></a></li>
+
+
+  			</ul>
+
+  		</div>
+      
+  		</div>
+     
+  		</section>	
+<div id="tablas" class="row row-primary">
+  
+
+
+
+</div>
+
+  		
+ 
+</body>
+
+</html>
